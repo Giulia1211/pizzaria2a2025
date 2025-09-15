@@ -1,43 +1,21 @@
-import {useState} from 'react'
- 
-function App(){
- 
-  const [nome, setNome] = useState('Ronaldo');
- 
-const Formulario = (props) => {
+import './App.css'
+import Produtos from './pages/produtos'
 
-  return (
-    <>
-    <h4>
-      Formulario de inscrição</h4>
-      <input className="Nome"
-          name = "nome"
-          placeholder="Digite seu nome..."
-          onChange={(e)=> props.nome = e.target.value}
-          type="text" />
-        <button onClick={()=>{
-          (props.texto!= null) ? alert(props.texto) : alert (props.nome)
-          }}>
-        CLIQUE AQUI
-      </button>
-    </>
+const App =() =>{
 
+return (
 
-  )
+  <div>
+
+  <h1>
+    Projeto Pizzaria
+  </h1>
+
+ <Produtos/>
+
+  </div>
+)
+
 }
 
-
-  return (
-    <div>
-      <h3>Pizzaria 2A</h3>
-      <Formulario texto = "Texto enviado pelo App"/>
-      <Formulario texto = "Giulherme meu amor"/>
-      <Formulario texto = "Novo texto pelo App"/>
-      <Formulario nome = {nome} />
-   </div>
-  )
-}
- 
-export default App   
-  
-
+export default App
